@@ -119,7 +119,6 @@ html {
     left: 20%;
     cursor: pointer;
     filter: drop-shadow(1.1);
-
 }
 
 .header-bottom .header-right p {
@@ -182,7 +181,7 @@ html {
 
 #events {
     width: 100%;
-    padding: 50px;
+    padding: 0px;
     max-height: 200vh;
 }
 
@@ -194,17 +193,22 @@ html {
 
 #events .events-bar {
     width: 100%;
-    max-height: 130vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding-top: 50px;
+    padding-top: 30px;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 30px;
     row-gap: 30px;
+    column-gap: 50px;
+}
+.events-bar div{
+    place-self: center;
 }
 
 .events-bar div:nth-child(1) {
     width: 300px;
     height: 300px;
-    margin-left: 100px;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) inset;
@@ -252,9 +256,7 @@ html {
 .events-bar div:nth-child(2) {
     width: 300px;
     height: 300px;
-    margin-left: 20px;
     background: blue;
-    margin-left: 100px;
     border-radius: 10px;
     background: linear-gradient(to right, #e47b7b, rgb(208, 56, 56));
     color: white;
@@ -263,9 +265,7 @@ html {
 .events-bar div:nth-child(3) {
     width: 300px;
     height: 300px;
-    margin-left: 20px;
     background: linear-gradient(to right, #e47b7b, rgb(208, 56, 56));
-    margin-left: 100px;
     border-radius: 10px;
     color: white;
 }
@@ -273,7 +273,7 @@ html {
 #hi {
     position: relative;
     right: -88%;
-    top: 10px;
+    top: -10px;
     font-size: 20px;
     text-decoration: underline;
     color: blue;
@@ -487,33 +487,15 @@ html {
     color: black;
 }
 
-@media (max-width:385px) and (min-width:321px){
-    .events-bar div:nth-child(1) {
-        margin-left: -10px;
-        margin-top: 10px;
+@media (max-width:385px) and (min-width:300px){
+    #events .events-bar div{
+        place-self: center;
+        width: 280px;
     }
-
-    .events-bar div:nth-child(2) {
-        margin-left: -10px;
-    }
-
-    .events-bar div:nth-child(3) {
-        margin-left: -10px;
-    }
-
-    #events {
-        min-height: 175vh;
-    }
-    #events .events-bar {
-        padding: 3px 10px;
-    }
-
     #hi {
-        right: -82%;
-        top: 160px;
-
+        right: -70%;
+        top: -10px;
     }
-
     #contact div .form {
         height: 450px;
         width: 280px;
@@ -698,25 +680,14 @@ html {
         font-size: 30px;
         cursor: pointer;
     }
-
-    #events {
-        width: 100%;
-        padding: 50px;
-        min-height: 180vh;
-    }
-    .events-bar div:nth-child(3) {
-        margin-left: 0px;
-    }
-    .events-bar div:nth-child(2) {
-        margin-left: 0px;
-    }
-    .events-bar div:nth-child(1) {
-        margin-left: 0px;
+    .events-bar div {
+        place-self: center;
     }
 
     .header-bottom .header-left {
         flex-basis: 100%;
         order: 2;
+        padding-bottom: 30px;
 
     }
 
@@ -740,14 +711,14 @@ html {
     }
 
     .header-bottom .header-right img {
-        width: 70%;
+        width: 90%;
         position: relative;
-        left: 12%;
+        left: 2%;
         top: 80px;
         margin: 0 auto;
     }
     #hi{
-        top: 190px;
+        top: -10px;
         right:-75%;
     }
     #contact div .form {
@@ -761,29 +732,36 @@ html {
 
 }
 
-@media (max-width:750px) and (min-width:482px){
+@media (max-width:770px) and (min-width:482px){
     .header-bottom .header-right p {
         display: none;
     }
+    .events-bar div{
+        place-self: center;
+    
+    }
+    .header-bottom .header-left {
+        flex-basis: 100%;
+        order: 2;
+        padding-bottom: 30px;
 
-    .events-bar div:nth-child(3) {
-        position: relative;
-        left: -40px;
     }
 
-    .events-bar div:nth-child(2) {
-        position: relative;
-        left: -40px;
+    .header-bottom .header-right {
+        order: 1;
+        flex-basis: 100%;
     }
-
-    .events-bar div:nth-child(1) {
+    .header-bottom .header-right img {
+        width: 92%;
         position: relative;
-        left: -40px;
+        left: 2%;
+        top: 80px;
+        margin: 0 auto;
     }
 
     #hi {
         right: -82%;
-        top: 140px;
+        top: -20px;
 
     }
 
